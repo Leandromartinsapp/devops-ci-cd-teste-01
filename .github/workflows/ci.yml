@@ -18,3 +18,7 @@ jobs:
       run: npm install 
     - name: Run Test
       run: npm test
+    - name: Install Vecel CLI
+      run: npm install -g vercel
+    - name: Deploy to vercel
+      run: vercel --token ${{secrets.VERCEL_TOKEN}} --prod --yes
